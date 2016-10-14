@@ -38,9 +38,10 @@ public class LoginTest {
         imageButton.perform(click());
 
         onView(allOf(withId(R.id.username), isDisplayed()))
-                .perform(typeText("shivrajp130.cj@gmail.com"));
+                .perform(typeText("shivrajp130.cj@gmail.com"),closeSoftKeyboard());
+
         onView(allOf(withId(R.id.password), isDisplayed()))
-                .perform(typeText("password123"));
+                .perform(typeText("password123"),closeSoftKeyboard());
 
         closeSoftKeyboard();
 
