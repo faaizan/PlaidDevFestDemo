@@ -86,12 +86,7 @@ public class DesignCheckTest {
                         isDisplayed()));
         button2.check(matches(isDisplayed()));
 
-        ViewInteraction imageButton2 = onView(
-                allOf(withId(R.id.back),
-                        withParent(allOf(withId(R.id.back_wrapper),
-                                withParent(withId(R.id.draggable_frame)))),
-                        isDisplayed()));
-        imageButton2.perform(click());
+        pressBack();
 
         ViewInteraction actionMenuItemView = onView(
                 allOf(withId(R.id.menu_filter), withContentDescription("Filter"), isDisplayed()));
