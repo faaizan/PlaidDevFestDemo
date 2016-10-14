@@ -70,6 +70,15 @@ android {
     }
 }
 
+spoon {
+
+    // Enable debug output
+    debug = true
+
+    grantAllPermissions = true
+
+}
+
 repositories {
     jcenter()
 }

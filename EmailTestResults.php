@@ -1,6 +1,6 @@
 <?php
 echo "string";
-$string = file_get_contents('spoon-output/result.json');
+$string = file_get_contents('app/build/spoon/debug/result.json');
 $content = json_decode($string,true);
 $filename = 'HTMLEmailResult.html';
 $fh = fopen($filename, 'w') or die("can't open file");
