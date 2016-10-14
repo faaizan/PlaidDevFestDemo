@@ -26,7 +26,7 @@ import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class LoginTest {
+public class LoginFailTest {
 
     @Rule
     public ActivityTestRule<HomeActivity> mActivityTestRule = new ActivityTestRule<>(HomeActivity.class);
@@ -38,12 +38,10 @@ public class LoginTest {
         imageButton.perform(click());
 
         onView(allOf(withId(R.id.username), isDisplayed()))
-                .perform(typeText("shivrajp130.cj@gmail.com"),closeSoftKeyboard());
+                .perform(typeText("wrongEmail@gmail.com"),closeSoftKeyboard());
 
         onView(allOf(withId(R.id.password), isDisplayed()))
-                .perform(typeText("password123"),closeSoftKeyboard());
-
-        closeSoftKeyboard();
+                .perform(typeText("wrongpassword123"),closeSoftKeyboard());
 
         /*ViewInteraction emailEntry = onView(allOf(withId(R.id.username), isDisplayed()));
         emailEntry.perform(typeText("shivrajp130.cj@gmail.com"), closeSoftKeyboard());
