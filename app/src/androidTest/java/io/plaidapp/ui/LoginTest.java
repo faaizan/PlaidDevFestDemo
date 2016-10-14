@@ -37,12 +37,19 @@ public class LoginTest {
                 allOf(withId(R.id.fab), isDisplayed()));
         imageButton.perform(click());
 
-        ViewInteraction emailEntry = onView(allOf(withId(R.id.username), isDisplayed()));
+        onView(allOf(withId(R.id.username), isDisplayed()))
+                .perform(typeText("shivrajp130.cj@gmail.com"));
+        onView(allOf(withId(R.id.password), isDisplayed()))
+                .perform(typeText("password123"));
+
+        closeSoftKeyboard();
+
+        /*ViewInteraction emailEntry = onView(allOf(withId(R.id.username), isDisplayed()));
         emailEntry.perform(typeText("shivrajp130.cj@gmail.com"), closeSoftKeyboard());
 
-        /*ViewInteraction baselineGridTextView = onView(
+        *//*ViewInteraction baselineGridTextView = onView(
                 allOf(withId(android.R.id.text1), withText("shivrajp130.cj@gmail.com"), isDisplayed()));
-        baselineGridTextView.perform(click());*/
+        baselineGridTextView.perform(click());*//*
 
         pressBack();
 
@@ -50,7 +57,7 @@ public class LoginTest {
 
         ViewInteraction passwordEntry = onView(
                 allOf(withId(R.id.password), isDisplayed()));
-        passwordEntry.perform(typeText("12345678"), closeSoftKeyboard());
+        passwordEntry.perform(typeText("12345678"), closeSoftKeyboard());*/
 
         ViewInteraction button = onView(
                 allOf(withId(R.id.login), withText("Log in"),
