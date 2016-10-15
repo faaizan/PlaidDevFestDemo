@@ -49,6 +49,7 @@ public class PlaidDesignItemTest {
         pressBack();
 
 
+
         onView(withId(R.id.grid))
                 .perform(RecyclerViewActions.actionOnItemAtPosition(3, click()));
 
