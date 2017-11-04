@@ -44,7 +44,7 @@ import retrofit2.http.Query;
 
 public interface DesignerNewsService {
 
-    String ENDPOINT = "https://www.designernews.co/";
+    String ENDPOINT = "https://www.designernews. co/";
 
     @GET("api/v1/stories")
     Call<StoriesResponse> getTopStories(@Query("page") Integer page);
